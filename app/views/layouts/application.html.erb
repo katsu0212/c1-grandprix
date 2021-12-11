@@ -27,20 +27,29 @@
       <h1 class="title is-4" style="font-family: serif;">C1 GrandPrix</h1>
     <% end %>
     <% if user_signed_in? %>
-      <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
-                </p>
-              </div>
+      <div id="nabbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-item">
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <%= link_to "参加者一覧", users_path, class: "button is-worning is-light"  %>
+              </p>
+              <p class="control">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+              </p>
             </div>
           </div>
         </div>
+      </div>
     <% else %>
       <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
+                <p class="control">
+                 <%= link_to "参加者一覧", users_path, class: "button is-worning is-light"  %>
+                </p>
                 <p class="control">
                   <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
                 </p>
