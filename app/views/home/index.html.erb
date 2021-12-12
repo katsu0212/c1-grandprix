@@ -6,7 +6,7 @@
           <strong class="is-size-1" style="font-family: serif;">C1 GrandPrix</strong>
         </p>
       </div>
-      <% if user_signed_in? %>
+      <% unless user_signed_in? %>
         <div class="columns is-centered">
           <div class="column is-5">
             <br>
