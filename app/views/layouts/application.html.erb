@@ -39,23 +39,23 @@
       <% if user_signed_in? %>
         <div id="nabbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "投稿一覧", posts_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "Post List", posts_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "新規投稿", new_post_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "New Post", new_post_path, class: "navbar-item button is-black" %>
           </div>
 
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to "参加者一覧", users_path, class: "navbar-item button is-warning is-light"  %>
+                  <%= link_to "Entry List", users_path, class: "navbar-item button is-black"  %>
                 </p>
                 <p class="control">
-                  <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
+                  <%= link_to "My Page", user_path(current_user), class: "button is-black" %>
                 </p>
                 <p class="control">
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is-black" %>
                 </p>
               </div>
             </div>
@@ -64,19 +64,19 @@
       <% else %>
         <div id="nabbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "投稿一覧", posts_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "Post List", posts_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "参加者一覧", users_path, class: "navbar-item button is-warning is-light"  %>
+            <%= link_to "Entry List", users_path, class: "navbar-item button is-warning is-light"  %>
           </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
+                  <%= link_to "Log In", new_user_session_path, class: "button is-warning is-light" %>
                 </p>
                 <p class="control">
-                  <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-light" %>
+                  <%= link_to "New Post", new_user_registration_path, class: "button is-warning is-light" %>
                 </p>
               </div>
             </div>
