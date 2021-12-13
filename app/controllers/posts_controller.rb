@@ -3,6 +3,12 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all
+    if user_signed_in?
+      render :index
+    else
+      render 'home/index'
+    end
+    
   end
 
   def new

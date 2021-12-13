@@ -20,6 +20,7 @@
                   <%= attachment_image_tag post, :image %>
                 <% end %>
               </figure>
+              <div><%= post.body %></div>
             </div>
             <div class="card-content">
               <div class="media">
@@ -35,6 +36,10 @@
                 </div>
               </div>
 
+              <div id="likes_buttons_<%= post.id %>">
+                <%= render partial: 'likes/like', locals: {post: post} %>
+              </div>
+              
               <div class="content">
                 <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
               </div>
@@ -45,4 +50,5 @@
     </div>
   </div>
 </section>
+
 
