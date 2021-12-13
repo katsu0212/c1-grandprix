@@ -40,6 +40,10 @@
                 <%= render partial: 'likes/like', locals: {post: post} %>
               </div>
               
+              <div id="dislikes_buttons_<%= post.id %>">
+                <%= render partial: 'dislikes/dislike', locals: {post: post} %>
+              </div>
+              
               <div class="content">
                 <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
               </div>

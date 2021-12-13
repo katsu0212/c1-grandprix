@@ -15,7 +15,7 @@ class User < ApplicationRecord
   end
 
   def disliked_by?(post_id)
-    dislikes.where(post_id: post_id).exists?
+    dislike.where(post_id: post_id).exists?
   end
   
 end
