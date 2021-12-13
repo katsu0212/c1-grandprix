@@ -20,6 +20,7 @@
                   <%= attachment_image_tag post, :image %>
                 <% end %>
               </figure>
+              <div><%= post.body %></div>
             </div>
             <div class="card-content">
               <div class="media">
@@ -34,7 +35,7 @@
                   <div class="title"><%=link_to post.user.user_name, user_path(post.user.id) %></div>
                 </div>
               </div>
-              
+
               <div id="likes_buttons_<%= post.id %>">
                 <%= render partial: 'likes/like', locals: {post: post} %>
               </div>
