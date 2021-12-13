@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :user_name, presence: true
 
   def liked_by?(post_id)
-    likes.where(post_id: post_id).exists?
+    likes.where(post_id: post_id).exists? 
   end
 
   def disliked_by?(post_id)

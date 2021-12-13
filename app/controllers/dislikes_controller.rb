@@ -1,7 +1,7 @@
 class DislikesController < ApplicationController
   before_action :post_params
   def create
-    Dislike.create(user_id: current_user.id, post_id: params[:id])
+   Dislike.create(user_id: current_user.id, post_id: params[:id])
   end
   
   def destroy
