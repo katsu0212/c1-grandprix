@@ -34,7 +34,11 @@
                   <div class="title"><%=link_to post.user.user_name, user_path(post.user.id) %></div>
                 </div>
               </div>
-
+              
+              <div id="likes_buttons_<%= post.id %>">
+                <%= render partial: 'likes/like', locals: {post: post} %>
+              </div>
+              
               <div class="content">
                 <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
               </div>
@@ -45,4 +49,5 @@
     </div>
   </div>
 </section>
+
 
