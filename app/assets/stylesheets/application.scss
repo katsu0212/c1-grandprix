@@ -35,21 +35,6 @@
   background-image: linear-gradient(to bottom, rgba(255, 152, 0, 0.7) 0%, rgba(33, 33, 33, 0.7) 100%);
 }
 
-.rist-back {
-  background-image: url('white.jpg') ;
-  height: 100%;
-}
-
-.new-back {
-  background-image: url('white.jpg') ;
-  height: 100vh;
-}
-
-.show-back {
-  background-image: url('white.jpg') ;
-  height: 100vh;
-}
-
 .my-back {
   background-image: url('white.jpg') ;
   background-repeat: no-repeat;
@@ -63,4 +48,25 @@
 
 .flex-buttons {
   display: flex;
+}
+
+ul {
+
+  position: relative;
+}
+
+ul li {
+  font-weight: bold;
+  padding: 0.5em 0.5em 0.5em 1.7em;
+  list-style-type: none!important;
+  background: -webkit-linear-gradient(top, whitesmoke 0%, whitesmoke 100%);
+  background: linear-gradient(to bottom, whitesmoke 0%, #1a1818 100%);
+  text-shadow: 1px 1px 1px whitesmoke;
+  color: black;
+}
+
+.rank-title {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
 }
