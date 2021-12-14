@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   has_many :dislike, dependent: :destroy
 
   with_options presence: true do
-    validates :body,  presence: { message: 'ひとこと入力してください。' }
-    validates :image, presence: { message: '画像を添付してください。' }
+    validates :body
+    validates :image
   end
 end
