@@ -17,8 +17,8 @@
  @import "bulma";
 
  body {
-   font-family: serif;
- }
+  font-family: serif;
+}
  .notification:not(:last-child){
 	margin-bottom: 0;
 }
@@ -33,4 +33,34 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(to bottom, rgba(255, 152, 0, 0.7) 0%, rgba(33, 33, 33, 0.7) 100%);
+}
+
+.rist-back {
+  background-image: url('white.jpg') ;
+  height: 100%;
+}
+
+.new-back {
+  background-image: url('white.jpg') ;
+  height: 100vh;
+}
+
+.show-back {
+  background-image: url('white.jpg') ;
+  height: 100vh;
+}
+
+.my-back {
+  background-image: url('white.jpg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.entry-back {
+  background-image: url('white.jpg') ;
+  height: 100vh;
+}
+
+.flex-buttons {
+  display: flex;
 }

@@ -1,59 +1,62 @@
-<section class="hero is-success">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        投稿詳細
-      </h1>
+<div class="show-back">
+  <section class="hero is-black">
+    <div class="has-text-centered p-3">
+      <div class="container">
+        <h1 class="title">
+          Post Detail
+        </h1>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-7">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <%= attachment_image_tag @post, :image %>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <table class="table is-narrow">
-                <tr>
-                  <th>一言</th>
-                </tr>
-                <tr>
-                  <td><%= simple_format @post.body %></td>
-                </tr>
-              </table>
-              <% if @post.user.id == current_user.id %>
-                <%= link_to "編集", edit_post_path(@post), class: "button is-success" %>
-              <% end %>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-7">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <%= attachment_image_tag @post, :image %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <table class="table is-narrow">
+                  <tr>
+                    <th>一言</th>
+                  </tr>
+                  <tr>
+                    <td><%= simple_format @post.body %></td>
+                  </tr>
+                </table>
+                <% if @post.user.id == current_user.id %>
+                  <%= link_to "編集", edit_post_path(@post), class: "button is-success" %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column is-4">
-        <article class="panel is-link">
-          <p class="panel-heading">
-             <%= @post.user.user_name %>
-          </p>
-          <div class="panel-block">
-            <p class="control">
-              <%= @post.user.profile %>
+        <div class="column is-4">
+          <article class="panel is-dark">
+          Entry Name
+            <p class="panel-heading">
+              <%= @post.user.user_name %>
             </p>
-          </div>
-          <%= link_to user_path(@post.user), class: "panel-block" do %>
-            <span class="panel-icon">
-              <i class="fas fa-user" aria-hidden="true"></i>
-            </span>
-            <%= @post.user.user_name %> さんのページへ
-          <% end %>
-        </article>
+            <div class="panel-block">
+              <p class="control">
+                <%= @post.user.profile %>
+              </p>
+            </div>
+            <%= link_to user_path(@post.user), class: "panel-block" do %>
+              <span class="panel-icon">
+                <i class="fas fa-user" aria-hidden="true"></i>
+              </span>
+              <%= @post.user.user_name %> ⏩
+            <% end %>
+          </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
