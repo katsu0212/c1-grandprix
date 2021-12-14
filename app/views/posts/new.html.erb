@@ -1,42 +1,42 @@
-<section class="hero is-success">
-  <div class="hero-body">
+<div class= "new-back">
+  <section class="hero is-black">
     <div class="container">
       <h1 class="title">
-        新規投稿作成
+        New Post Create
       </h1>
     </div>
-  </div>
-</section>
+  </section>
 
-<% if @post.errors.any? %>
-  <div class="notification is-danger">
-    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
-    <ul>
-      <% @post.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-6">
-        <%= form_for @post do |f| %>
-          <div class="field">
-            <%= f.label :image, "写真", class: "label" %>
-            <%= f.attachment_field :image, class: "input" %>
-          </div>
-
-          <div class="field">
-            <%= f.label :body, "ひとこと", class: "label" %>
-            <%= f.text_area :body, class: "textarea" %>
-          </div>
-
-            <%= f.submit "投稿", class: "button is-success" %>
+  <% if @post.errors.any? %>
+    <div class="notification is-danger">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
         <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <%= form_for @post do |f| %>
+            <div class="field">
+              <%= f.label :image, "写真", class: "label" %>
+              <%= f.attachment_field :image, class: "input" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :body, "ひとこと", class: "label" %>
+              <%= f.text_area :body, class: "textarea" %>
+            </div>
+
+              <%= f.submit "投稿", class: "button is-danger" %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

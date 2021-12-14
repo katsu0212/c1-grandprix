@@ -1,23 +1,52 @@
-<% last_like = 0 %>
-<% j = 1 %>
-<% @month_post_like_ranks .each.with_index(1) do |rank, i| %>
-  <% if i == 1 %>
-    <% last_like = rank.likes.count %>
-  <% end %>
-  <!--last_likeといいね数比べて同じなら同じ順位、違うなら次の順位表示-->
-  <% if rank.likes.count != last_like %>
-    <% j = i %>
-    第<%= j %>位 
-    <%= rank.user.user_name %>
-    <p><%= rank.likes.count %>いいね</p>
-    <% last_like = rank.likes.count %>
-    
+  <h1>Ranking</h1>
+  
+  <div>likeランキング</div>
+  
+  <% last_like = 0 %>
+  <% j = 1 %>
+  <% @month_post_like_ranks .each.with_index(1) do |rank, i| %>
+    <% if i == 1 %>
+      <% last_like = rank.likes.count %>
+    <% end %>
+    <!--last_likeといいね数比べて同じなら同じ順位、違うなら次の順位表示-->
+    <% if rank.likes.count != last_like %>
+      <% j = i %>
+      第<%= j %>位 
+      <%= rank.user.user_name %>
+      <p><%= rank.likes.count %>いいね</p>
+      <% last_like = rank.likes.count %>
       
-  <% else %>
-    第<%= j %>位
-    <%= rank.user.user_name %>
-    <% last_like = rank.likes.count %>
-    <p><%= rank.likes.count %>いいね</p>
+        
+    <% else %>
+      第<%= j %>位
+      <%= rank.user.user_name %>
+      <% last_like = rank.likes.count %>
+      <p><%= rank.likes.count %>いいね</p>
+    <% end %>
+
   <% end %>
 
-<% end %>
+  <div>dislikeランキング</div>
+  <% last_dislike = 0 %>
+  <% j = 1 %>
+  <% @month_post_dislike_ranks .each.with_index(1) do |rank, i| %>
+    <% if i == 1 %>
+      <% last_dislike = rank.dislike.count %>
+    <% end %>
+    <!--last_likeといいね数比べて同じなら同じ順位、違うなら次の順位表示-->
+    <% if rank.dislike.count != last_dislike %>
+      <% j = i %>
+      第<%= j %>位 
+      <%= rank.user.user_name %>
+      <p><%= rank.dislike.count %>いいね</p>
+      <% last_dislike = rank.dislike.count %>
+      
+        
+    <% else %>
+      第<%= j %>位
+      <%= rank.user.user_name %>
+      <% last_dislike = rank.dislike.count %>
+      <p><%= rank.dislike.count %>いいね</p>
+    <% end %>
+
+  <% end %>
