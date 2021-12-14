@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "ranks#index"
+  root to: "posts#index"
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
   post 'dislike/:id' => 'dislikes#create', as: 'create_dislike'

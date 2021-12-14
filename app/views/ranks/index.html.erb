@@ -1,6 +1,13 @@
-  <h1>Ranking</h1>
+ <div class="entry-back">
+  <section class="hero is-danger">
+    <div class="container">
+      <h1 class="title">
+        Ranking
+      </h1>
+    </div>
+  </section>
   
-  <div>likeランキング</div>
+  <h2 class="rank-title">Like Ranking</h2>
   
   <% last_like = 0 %>
   <% j = 1 %>
@@ -8,45 +15,49 @@
     <% if i == 1 %>
       <% last_like = rank.likes.count %>
     <% end %>
-    <!--last_likeといいね数比べて同じなら同じ順位、違うなら次の順位表示-->
+ 
     <% if rank.likes.count != last_like %>
       <% j = i %>
-      第<%= j %>位 
-      <%= rank.user.user_name %>
-      <p><%= rank.likes.count %>いいね</p>
-      <% last_like = rank.likes.count %>
-      
+      <ul class ="ranking">
+        <li>  第<%= j %>位  <%= rank.user.user_name %></li>
+        <li><%= rank.likes.count %>いいね</li>
+        <li><% last_like = rank.likes.count %> </li>
+      </ul>
         
     <% else %>
-      第<%= j %>位
-      <%= rank.user.user_name %>
-      <% last_like = rank.likes.count %>
-      <p><%= rank.likes.count %>いいね</p>
+      <ul class ="ranking">
+        <li> 第<%= j %>位 <%= rank.user.user_name %> </li>
+          <% last_like = rank.likes.count %>
+         <li><%= rank.likes.count %>いいね</li>
+      </ul>
     <% end %>
 
   <% end %>
 
-  <div>dislikeランキング</div>
+  <h2 class="rank-title">Dislike Ranking</h2>
+
   <% last_dislike = 0 %>
   <% j = 1 %>
   <% @month_post_dislike_ranks .each.with_index(1) do |rank, i| %>
     <% if i == 1 %>
       <% last_dislike = rank.dislike.count %>
     <% end %>
-    <!--last_likeといいね数比べて同じなら同じ順位、違うなら次の順位表示-->
+  
     <% if rank.dislike.count != last_dislike %>
       <% j = i %>
-      第<%= j %>位 
-      <%= rank.user.user_name %>
-      <p><%= rank.dislike.count %>いいね</p>
-      <% last_dislike = rank.dislike.count %>
-      
+      <ul class ="ranking">
+        <li>第<%= j %>位 <%= rank.user.user_name %></li>
+        <li><%= rank.dislike.count %>いいね</li>
+        <% last_dislike = rank.dislike.count %>
+      </ul>
         
     <% else %>
-      第<%= j %>位
-      <%= rank.user.user_name %>
-      <% last_dislike = rank.dislike.count %>
-      <p><%= rank.dislike.count %>いいね</p>
+      <ul class ="ranking">
+        <li>第<%= j %>位 <%= rank.user.user_name %></li>
+        <% last_dislike = rank.dislike.count %>
+        <li><%= rank.dislike.count %>いいね</li>
+      </ul>
     <% end %>
 
   <% end %>
+</div>
