@@ -1,56 +1,58 @@
-<section class="hero is-black">
-  <div class="container">
-    <h1 class="title">
-      Post Rist
-    </h1>
-  </div>
-</section>
+<div class="rist-back">
+  <section class="hero is-black">
+    <div class="container">
+      <h1 class="title">
+        Post Rist
+      </h1>
+    </div>
+  </section>
 
-<section class="section">
-  <div class="container">
-    <div class="columns is-multiline">
-      <% @posts.each do |post| %>
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <%= link_to post_path(post) do %>
-                  <%= attachment_image_tag post, :image %>
-                <% end %>
-              </figure>
-              <div><%= post.body %></div>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <%= link_to user_path(post.user.id) do %>
-                      <%= attachment_image_tag post.user, :profile_image, fallback: "noimage.png" %>
-                    <% end %>
-                  </figure>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        <% @posts.each do |post| %>
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <%= link_to post_path(post) do %>
+                    <%= attachment_image_tag post, :image %>
+                  <% end %>
+                </figure>
+                <div class="is-size-5 "><%= post.body %></div>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <%= link_to user_path(post.user.id) do %>
+                        <%= attachment_image_tag post.user, :profile_image, fallback: "noimage.png" %>
+                      <% end %>
+                    </figure>
+                  </div>
+                  <div class="is-size-6">Entry Name</div>
+                  <div class="media-content has-text-right is-size-4 has-text-weight-bold">
+                    <%=link_to post.user.user_name, user_path(post.user.id) %>
+                  </div>
                 </div>
-                <div class="media-content">
-                  <div class="title"><%=link_to post.user.user_name, user_path(post.user.id) %></div>
+                <div class="flex-buttons">
+                  <div id="likes_buttons_<%= post.id %>">
+                    <%= render partial: 'likes/like', locals: {post: post} %>
+                  </div>
+                  
+                  <div id="dislikes_buttons_<%= post.id %>">
+                    <%= render partial: 'dislikes/dislike', locals: {post: post} %>
+                  </div>
                 </div>
-              </div>
-
-              <div id="likes_buttons_<%= post.id %>">
-                <%= render partial: 'likes/like', locals: {post: post} %>
-              </div>
-              
-              <div id="dislikes_buttons_<%= post.id %>">
-                <%= render partial: 'dislikes/dislike', locals: {post: post} %>
-              </div>
-              
-              <div class="content">
-                <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+                <div class="content">
+                  <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
+</div>
 
