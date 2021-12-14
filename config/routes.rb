@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
   post 'dislike/:id' => 'dislikes#create', as: 'create_dislike'
   delete 'dislike/:id' => 'dislikes#destroy', as: 'destroy_dislike'
-  resources :ranks
   resources :users 
   resources :posts do
     resources :likes, only: [:create, :destroy]

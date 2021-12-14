@@ -16,6 +16,9 @@
 
  @import "bulma";
 
+ body {
+   font-family: serif;
+ }
  .notification:not(:last-child){
 	margin-bottom: 0;
 }

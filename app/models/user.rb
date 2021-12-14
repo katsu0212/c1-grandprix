@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :dislike, dependent: :destroy
 
+
   validates :user_name, presence: true
 
   def liked_by?(post_id)
