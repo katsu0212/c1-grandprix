@@ -56,7 +56,6 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "bulma-rails"
-gem 'jquery-rails'
 gem 'rspec-rails', '~> 4.0.0'
 gem 'factory_bot_rails'
 gem 'faker'

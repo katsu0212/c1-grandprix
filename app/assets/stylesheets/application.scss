@@ -50,5 +50,19 @@
   display: flex;
 }
 
+.active{
+  background-Color:yellow;
+}
+.selected{
+  background-Color:red;
+}
+#large_block{
+display:flex;
+flex-wrap:wrap;
+}
+#large_block div{
+width:24%;
+}
+
 
 
