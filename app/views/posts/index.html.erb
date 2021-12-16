@@ -9,13 +9,12 @@
                 <%= attachment_image_tag post, :image %>
               <% end %>
             </figure>
-            <div class="is-size-5 ">
+            <div class="is-size-4 ">
               <%= post.body %>
             </div>
             <div class="media">
-              <div class="is-size-6">Entry Name</div>
-              <div class="media-content has-text-right is-size-4 has-text-weight-bold">
-                <%=link_to post.user.user_name, user_path(post.user.id) %>
+              <div class="media-content has-text-right is-size-5 has-text-weight-bold">
+                <%= link_to post.user.user_name, user_path(post.user.id) %>
               </div>
             </div>
             <div class="flex-buttons">

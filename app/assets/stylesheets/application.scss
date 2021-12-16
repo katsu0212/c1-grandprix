@@ -22,6 +22,7 @@
 
 .error-message {
   background-color: yellow;
+  color: black;
 }
 
  .notification:not(:last-child){
@@ -69,6 +70,11 @@
   margin: 30px 0;
 }
 
+.image-label {
+  margin: 30px 0;
+  background-color: black;
+}
+
 .em-color {
   color: red;
   background-color: yellow;
@@ -84,11 +90,15 @@
   font-size: 4vh;
 }
 
+.column {
+  color: white;
+}
 
 .my-back {
   background-color: black;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .detail {
@@ -98,8 +108,8 @@
   font-weight: bold;
 }
 
-.entry-back {
-  background-image: url(positive.jpg);
+.user-all {
+  background-image: url(king.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
