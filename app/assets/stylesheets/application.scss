@@ -15,10 +15,15 @@
  */
 
  @import "bulma";
-
+ 
  body {
   font-family: serif;
 }
+
+.error-message {
+  background-color: yellow;
+}
+
  .notification:not(:last-child){
 	margin-bottom: 0;
 }
@@ -29,11 +34,56 @@
 
 .section1 {
   height: 95vh;
-  background-image: url(IMG_0900.JPG);
-  background-repeat: no-repeat;
+  width: 100%;
+  background-image: url(kurokabe.jpg);
   background-size: cover;
-  background-image: linear-gradient(to bottom, rgba(255, 152, 0, 0.7) 0%, rgba(33, 33, 33, 0.7) 100%);
+  background-position: center;
 }
+.title {
+  color: yellow;
+}
+
+.login-button {
+  color: yellow;
+  font-weight: bold;
+  line-height: 40vh;
+  font-size: 4vh;
+}
+
+.new-section {
+  background-image: url(kuro.jpg);
+  height: 96vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.new-title {
+  padding-top: 50px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.new-field {
+  margin: 30px 0;
+}
+
+.em-color {
+  color: red;
+  background-color: yellow;
+}
+
+.post-count {
+  color: white;
+}
+
+.newenrty-button {
+  color: yellow;
+  font-weight: bold;
+  font-size: 4vh;
+}
+
 
 .my-back {
   background-image: url('white.jpg') ;
@@ -42,8 +92,11 @@
 }
 
 .entry-back {
-  background-image: url('white.jpg') ;
+  background-image: url(kurokabe.jpg);
   height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .flex-buttons {

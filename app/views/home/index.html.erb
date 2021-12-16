@@ -1,29 +1,16 @@
 <section class="section1">
   <article class="media">
     <div class="media-content">
-      <div class="content has-text-centered">
-        <p>
-          <strong class="is-size-1" style="font-family: serif;">C1 GrandPrix</strong>
-        </p>
-      </div>
       <% unless user_signed_in? %>
         <div class="columns is-centered">
-          <div class="column is-5">
+          <div class="top-menu">
             <br>
-            <%= link_to "Log In", new_user_session_path, class: "button is-black is-fullwidth" %>
+            <%= link_to "Log In", new_user_session_path, class: "login-button" %>
             <br>
-            <%= link_to "New Entry", new_user_registration_path, class: "button is-black is-fullwidth" %>
+            <%= link_to "New Entry", new_user_registration_path, class: "newenrty-button" %>
           </div>
         </div>
       <% end %>
     </div>
   </article>
-  <br>
-  <div class="columns is-centered">
-    <div class="column">
-      <figure>
-        <div class="main-image"></div>
-      </figure>
-    </div>
-  </div>
 </section>

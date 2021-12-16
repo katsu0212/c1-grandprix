@@ -14,29 +14,18 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <div class="notification is-info">
-        <p class="notice"><%= notice %></p>
-      </div>
-    <% end %>
-
+    
     <% if flash[:alert] %>
       <div class="notification is-danger">
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
 
-
-    <nav class="navbar is-warning">
+    <nav class="navbar is-black">
       <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="title is-4" style="font-family: serif;">C1 GrandPrix</h1>
+          <h1 class="title">C1 GrandPrix</h1>
         <% end %>
-        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
 
       <% if user_signed_in? %>
@@ -70,19 +59,19 @@
       <% else %>
         <div id="nabbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "Post List", posts_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "Post List", posts_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "Entry List", users_path, class: "navbar-item button is-warning is-light"  %>
+            <%= link_to "Entry List", users_path, class: "navbar-item button is-black"  %>
           </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to "Log In", new_user_session_path, class: "button is-warning is-light" %>
+                  <%= link_to "Log In", new_user_session_path, class: "button is-black" %>
                 </p>
                 <p class="control">
-                  <%= link_to "New Entry", new_user_registration_path, class: "button is-warning is-light" %>
+                  <%= link_to "New Entry", new_user_registration_path, class: "button is-black" %>
                 </p>
               </div>
             </div>
