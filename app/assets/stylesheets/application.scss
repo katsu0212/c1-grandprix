@@ -86,15 +86,21 @@
 
 
 .my-back {
-  background-image: url('white.jpg') ;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.detail {
+  text-align: center;
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
 }
 
 .entry-back {
-  background-image: url(kurokabe.jpg);
+  background-image: url(positive.jpg);
   height: 100vh;
-  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }

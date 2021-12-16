@@ -1,18 +1,22 @@
 <% if user_signed_in? && current_user.id != post.user.id %>
- <% if current_user.disliked_by?(post.id) %>
+  <% if current_user.disliked_by?(post.id) %>
     <td>
       <%= link_to destroy_dislike_path(post), method: :DELETE, remote: true do %> 
-        <i class="fa fa-heart disunlike-btn"></i> 
+        <i class="far fa-meh-rolling-eyes disunlike-btn"></i> 
       <% end %> 
       <%= post.dislike.count %>
     </td>
- <% else %>
-      <td>
-        <%= link_to create_dislike_path(post), method: :POST, remote: true do %> 
-          <i class="fa fa-heart dislike-btn"></i> 
-        <% end %> 
-        <%= post.dislike.count %>
-      </td>
- <% end %>
+  <% elsif current_user.liked_by?(post.id) %>
+    <td>
+      <i class="far fa-meh-rolling-eyes unlike"></i> 
+      <%= post.dislike.count %>
+    </td>
+  <% else %>
+    <td>
+      <%= link_to create_dislike_path(post), method: :POST, remote: true do %> 
+        <i class="far fa-meh-rolling-eyes dislike-btn"></i> 
+      <% end %> 
+      <%= post.dislike.count %>
+    </td>
+  <% end %>
 <% end %>
-
