@@ -21,9 +21,6 @@
               <div id="likes_buttons_<%= post.id %>">
                 <%= render partial: 'likes/like', locals: {post: post} %>
               </div>
-              <div id="dislikes_buttons_<%= post.id %>">
-                <%= render partial: 'dislikes/dislike', locals: {post: post} %>
-              </div>
             </div>
             <div class="content">
               <time><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>

@@ -6,7 +6,8 @@ class User < ApplicationRecord
   attachment :profile_image
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :dislike, dependent: :destroy
+  has_many :titles, dependent: :destroy
+
 
   with_options presence: true do
     validates :user_name
@@ -17,10 +18,6 @@ class User < ApplicationRecord
 
   def liked_by?(post_id)
      likes.where(post_id: post_id).exists? 
-  end
-
-  def disliked_by?(post_id)
-    dislike.where(post_id: post_id).exists?
   end
   
 end
