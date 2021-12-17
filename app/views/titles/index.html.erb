@@ -1,0 +1,28 @@
+<div class="my-back">
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        <% @titles.each do |title| %>
+          <div class="column is-6">
+            <div class="is-size-4 ">
+              <%= title.content %>
+            </div>
+            <div class="media">
+              <div class="media-content has-text-right is-size-5 has-text-weight-bold">
+                <%= link_to title.user.user_name, user_path(title.user.id) %>
+              </div>
+            </div>
+            <div class="flex-buttons">
+              <div id="likes_buttons_<%= title.id %>">
+                <%= render partial: 'likes/like', locals: {title: title} %>
+              </div>
+            </div>
+            <div class="content">
+              <time><%= title.updated_at.strftime("%Y-%m-%d %H:%M") %></time>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>

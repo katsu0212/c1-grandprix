@@ -1,0 +1,32 @@
+<div class="entry-back">
+  <% if @title.errors.any? %>
+    <div class="notification is-danger">
+      <h2><%= pluralize(@title.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+      <ul>
+        <% @title.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <%= form_for @title do |f| %>
+            
+            <%= f.collection_select(:title_id, Theme.all, :id, :name, {}, {class:"select-box", id:"title"}) %>
+            
+            <div class="field">
+              <%= f.label :content, "ひとこと", class: "label" %>
+              <%= f.text_area :content, class: "textarea" %>
+            </div>
+
+              <%= f.submit "投稿", class: "button is-danger" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

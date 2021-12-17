@@ -13,4 +13,7 @@ class TitlesController < ApplicationController
   def destroy
   end
 
+  def title_params
+    params.require(:title).permit(:title, :content, :theme_id)
+  end
 end
