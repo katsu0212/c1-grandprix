@@ -22,7 +22,7 @@ class User < ApplicationRecord
   end
 
   def smile_by?(title_id)
-     likes.where(title_id: title_id).exists? 
+     smiles.where(title_id: title_id).exists? 
   end
   
 end

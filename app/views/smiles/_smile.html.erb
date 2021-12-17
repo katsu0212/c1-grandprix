@@ -1,17 +1,17 @@
 <% if user_signed_in? && current_user.id != title.user.id %>
-  <% if current_user.title_by?(title.id)  %>
+  <% if current_user.smile_by?(title.id)  %>
     <td>
-      <%= link_to destroy_like_path(title), method: :DELETE, remote: true do %> 
+      <%= link_to destroy_smile_path(title), method: :DELETE, remote: true do %> 
         <i class="far fa-grin-squint-tears unlike-btn"></i> 
       <% end %> 
-      <%= title.likes.count %>
+      <%= title.smiles.count %>
     </td>
   <% else %>
     <td>
-      <%= link_to create_like_path(title), method: :POST, remote: true do %> 
+      <%= link_to create_smile_path(title), method: :POST, remote: true do %> 
         <i class="far fa-grin-squint-tears like-btn"></i> 
       <% end %> 
-      <%= title.likes.count %>
+      <%= title.smiles.count %>
     </td>
   <% end %>
 <% end %>

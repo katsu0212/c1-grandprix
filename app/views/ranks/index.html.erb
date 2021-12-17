@@ -36,7 +36,31 @@
 
   <h2 class="rank-title">Title like Ranking</h2>
 
-  
+  <% last_smile = 0 %>
+  <% j = 1 %>
+  <% @month_title_smile_ranks .each.with_index(1) do |rank, i| %>
+    <% if i == 1 %>
+      <% last_smile = rank.smiles.count %>
+    <% end %>
+ 
+    <% if rank.smiles.count != last_smile %>
+      <% j = i %>
+      <ul class ="ranking">
+        <li>  第<%= j %>位  <%= rank.user.user_name %></li>
+        <li><%= rank.smiles.count %>いいね</li>
+        <li><% last_smile = rank.smiles.count %> </li>
+      </ul>
+        
+    <% else %>
+      <ul class ="ranking">
+        <li> 第<%= j %>位 <%= rank.user.user_name %> </li>
+          <% last_smile = rank.smiles.count %>
+         <li><%= rank.smiles.count %>いいね</li>
+      </ul>
+    <% end %>
+
+  <% end %>
+
   
   
 
