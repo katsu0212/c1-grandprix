@@ -1,4 +1,5 @@
 class TitlesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @titles = Title.all
   end
@@ -8,12 +9,23 @@ class TitlesController < ApplicationController
   end
 
   def create
+    @title = Title.new(title_params)
+    @title.user_id = current_user.id
+    if @title.save
+      redirect_to titles_path
+    else 
+      render :new
+    end
   end
 
   def destroy
+    title = Title.find(params[:id])
+    title.destroy
+    render :index
   end
-
+  
+  private
   def title_params
-    params.require(:title).permit(:title, :content, :theme_id)
+    params.require(:title).permit(:title_id, :content)
   end
 end
