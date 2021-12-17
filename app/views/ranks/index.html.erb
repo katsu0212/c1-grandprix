@@ -34,32 +34,10 @@
 
   <% end %>
 
-  <h2 class="rank-title">Dislike Ranking</h2>
+  <h2 class="rank-title">Title like Ranking</h2>
 
-  <% last_dislike = 0 %>
-  <% j = 1 %>
-  <% @month_post_dislike_ranks .each.with_index(1) do |rank, i| %>
-    <% if i == 1 %>
-      <% last_dislike = rank.dislike.count %>
-    <% end %>
   
-    <% if rank.dislike.count != last_dislike %>
-      <% j = i %>
-      <ul class ="ranking">
-        <li>第<%= j %>位 <%= rank.user.user_name %></li>
-        <li><%= rank.dislike.count %>いいね</li>
-        <% last_dislike = rank.dislike.count %>
-      </ul>
-        
-    <% else %>
-      <ul class ="ranking">
-        <li>第<%= j %>位 <%= rank.user.user_name %></li>
-        <% last_dislike = rank.dislike.count %>
-        <li><%= rank.dislike.count %>いいね</li>
-      </ul>
-    <% end %>
-
-  <% end %>
+  
   
 
 

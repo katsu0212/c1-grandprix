@@ -31,7 +31,10 @@
       <% if user_signed_in? %>
         <div id="nabbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "Post List", posts_path, class: "navbar-item button is-black" %>
+            <%= link_to "写真で一言", posts_path, class: "navbar-item button is-black" %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "お題で一言", titles_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
             <%= link_to "New Post", new_post_path, class: "navbar-item button is-black" %>

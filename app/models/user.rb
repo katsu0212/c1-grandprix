@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :titles, dependent: :destroy
+  has_many :smiles, dependent: :destroy
 
 
   with_options presence: true do
@@ -18,6 +19,10 @@ class User < ApplicationRecord
 
   def liked_by?(post_id)
      likes.where(post_id: post_id).exists? 
+  end
+
+  def smile_by?(title_id)
+     likes.where(title_id: title_id).exists? 
   end
   
 end
