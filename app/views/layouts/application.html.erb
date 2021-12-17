@@ -31,29 +31,32 @@
       <% if user_signed_in? %>
         <div id="nabbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "写真で一言", posts_path, class: "navbar-item button is-black" %>
+            <%= link_to "写真で一言一覧", posts_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "お題で一言", titles_path, class: "navbar-item button is-black" %>
+            <%= link_to "お題で一言一覧", titles_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "New Post", new_post_path, class: "navbar-item button is-black" %>
+            <%= link_to "写真で一言 回答する", new_post_path, class: "navbar-item button is-black" %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "お題で一言 回答する", new_title_path, class: "navbar-item button is-black" %>
           </div>
 
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to "Entry List", users_path, class: "navbar-item button is-black"  %>
+                  <%= link_to "参加者一覧", users_path, class: "navbar-item button is-black"  %>
                 </p>
                 <p class="control">
-                  <%= link_to "My Page", user_path(current_user), class: "button is-black" %>
+                  <%= link_to "自分のページ", user_path(current_user), class: "button is-black" %>
                 </p>
                 <p class="control">
-                  <%= link_to "Ranking", ranks_path, class: "button is-black" %>
+                  <%= link_to "ランキング", ranks_path, class: "button is-black" %>
                 </p>
                 <p class="control">
-                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is-black" %>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-black" %>
                 </p>
               </div>
             </div>
