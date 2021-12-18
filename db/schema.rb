@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_12_17_064515) do
 
   create_table "titles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "title_id"
+    t.integer "theme_id"
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

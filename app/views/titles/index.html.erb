@@ -1,11 +1,13 @@
-<div class="my-back">
+<div class="title-back">
   <section class="section">
     <div class="container">
       <div class="columns is-multiline">
         <% @titles.each do |title| %>
           <div class="column is-6">
             <div class="is-size-4 ">
-              <%= title.content %>
+              <%= link_to title_path(title) do %>
+                <%= title.theme.name %>
+              <% end %>
             </div>
             <div class="media">
               <div class="media-content has-text-right is-size-5 has-text-weight-bold">

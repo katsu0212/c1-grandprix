@@ -18,6 +18,7 @@
  
  body {
   font-family: serif;
+  overflow:hidden
 }
 
 .error-message {
@@ -34,10 +35,10 @@
 }
 
 .section1 {
-  height: 95vh;
+  height: 96vh;
   width: 100%;
-  background-image: url(kurokabe.jpg);
-  background-size: cover;
+  background-image: url(ippon.jpg);
+  background-size: contain;
   background-position: center;
 }
 .title {
@@ -52,11 +53,10 @@
 }
 
 .new-section {
-  background-image: url(kuro.jpg);
+  background-image: url(good.jpg);
   height: 96vh;
   width: 100%;
   background-size: cover;
-  background-position: center;
 }
 
 .new-title {
@@ -77,29 +77,19 @@
 
 .em-color {
   color: red;
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.774);
 }
 
 .post-count {
   color: white;
 }
 
-.newenrty-button {
-  color: yellow;
-  font-weight: bold;
-  font-size: 4vh;
-}
 
-.column {
-  color: white;
-}
 
-.my-back {
-  background-color: black;
-  height: 100%;
+.columns {
   align-items: center;
-  justify-content: center;
 }
+
 
 .detail {
   text-align: center;
@@ -132,6 +122,5 @@ flex-wrap:wrap;
 #large_block div{
 width:24%;
 }
-
 
 

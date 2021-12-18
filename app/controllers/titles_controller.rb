@@ -18,6 +18,10 @@ class TitlesController < ApplicationController
     end
   end
 
+  def show 
+    @title = Title.find(params[:id])
+  end
+
   def destroy
     title = Title.find(params[:id])
     title.destroy
@@ -26,6 +30,7 @@ class TitlesController < ApplicationController
   
   private
   def title_params
-    params.require(:title).permit(:title_id, :content)
+    params.require(:title).permit(:content,:theme_id)
   end
+
 end

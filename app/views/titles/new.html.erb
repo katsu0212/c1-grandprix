@@ -1,4 +1,4 @@
-<div class="entry-back">
+<div class="title-back">
   <% if @title.errors.any? %>
     <div class="notification is-danger">
       <h2><%= pluralize(@title.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
@@ -13,13 +13,11 @@
   <section class="section">
     <div class="container">
       <div class="columns is-centered">
-        <div class="column is-6">
+        <div class="column is-8">
           <%= form_for @title do |f| %>
-            
-            <%= f.collection_select(:title_id, Theme.all, :id, :name, {}, {class:"select-box", id:"title"}) %>
-            
+            <%= f.collection_select(:theme_id, Theme.all, :id, :name, {}, {class:"select-box", id:"title"}) %>
             <div class="field">
-              <%= f.label :content, "ひとこと", class: "label" %>
+              <%= f.label :content, "回答", class: "label" %>
               <%= f.text_area :content, class: "textarea" %>
             </div>
 

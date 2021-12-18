@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>C1Grandprix</title>
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -31,29 +31,29 @@
       <% if user_signed_in? %>
         <div id="nabbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "写真で一言一覧", posts_path, class: "navbar-item button is-black" %>
+            <%= link_to "写真一覧", posts_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "お題で一言一覧", titles_path, class: "navbar-item button is-black" %>
+            <%= link_to "お題一覧", titles_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "写真で一言 回答する", new_post_path, class: "navbar-item button is-black" %>
+            <%= link_to "写真で一言", new_post_path, class: "navbar-item button is-black" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "お題で一言 回答する", new_title_path, class: "navbar-item button is-black" %>
+            <%= link_to "お題で一言", new_title_path, class: "navbar-item button is-black" %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "参加者一覧", users_path, class: "navbar-item button is-black"  %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "ランキング", ranks_path, class: "button is-black" %>
           </div>
 
           <div class="navbar-end">
             <div class="navbar-item">
-              <div class="field is-grouped">
+              <div class="field is-grouped">       
                 <p class="control">
-                  <%= link_to "参加者一覧", users_path, class: "navbar-item button is-black"  %>
-                </p>
-                <p class="control">
-                  <%= link_to "自分のページ", user_path(current_user), class: "button is-black" %>
-                </p>
-                <p class="control">
-                  <%= link_to "ランキング", ranks_path, class: "button is-black" %>
+                  <%= link_to "マイページ", user_path(current_user), class: "button is-black" %>
                 </p>
                 <p class="control">
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-black" %>
@@ -62,22 +62,16 @@
             </div>
           </div>
         </div>
-      <% else %>
         <div id="nabbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-item">
-            <%= link_to "Post List", posts_path, class: "navbar-item button is-black" %>
-          </div>
-          <div class="navbar-item">
-            <%= link_to "Entry List", users_path, class: "navbar-item button is-black"  %>
-          </div>
+      <% else %>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to "Log In", new_user_session_path, class: "button is-black" %>
+                  <%= link_to "ログイン", new_user_session_path, class: "button is-black" %>
                 </p>
                 <p class="control">
-                  <%= link_to "New Entry", new_user_registration_path, class: "button is-black" %>
+                  <%= link_to "新規登録", new_user_registration_path, class: "button is-black" %>
                 </p>
               </div>
             </div>
