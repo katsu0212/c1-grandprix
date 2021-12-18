@@ -18,10 +18,6 @@ class TitlesController < ApplicationController
     end
   end
 
-  def show 
-    @title = Title.find(params[:id])
-  end
-
   def destroy
     title = Title.find(params[:id])
     title.destroy

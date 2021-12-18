@@ -1,12 +1,4 @@
  <div class="my-back">
-  <section class="hero is-primary">
-    <div class="container">
-      <h1 class="title">
-        My Page
-      </h1>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
       <div class="columns is-centered">
@@ -14,33 +6,26 @@
           <figure class="image is-4by3">
             <%= attachment_image_tag @user, :profile_image, fallback: "noimage.png", class: "profile_image" %>
           </figure>
-          <div class="card">
-            <div class="column is-8">
-              <table class="table is-fullwidth">
-                <tr>EntryName
-                  <td class="is-size-4">
-                    <strong><%= @user.user_name %></strong>
-                  </td>
-                  <% if current_user.id == @user.id %>
-                
-                    <td>
-                      <%= @user.email %>
-                    </td>
-                    <td>
-                      <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
-                    </td>
-                  <% end %>
-                </tr>
-              </table>
-              <table class="table is-fullwidth">
-                <tr>
-                  <td>
-                    <%= @user.profile %>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
+            <div class="name-holder">
+          <div class="panel">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            名前    <%= @user.user_name %>
+          </div>     
+        </div>
+            <% if current_user.id == @user.id %>
+              <td>
+                <%= @user.email %>
+              </td>
+            <% end %>
+          </tr>
+        </table>
+        <table class="profile-comment">
+          <td>
+            <%= @user.profile %>
+          </td>
+        </table>
+        <br>
+        <%= link_to "編集", edit_user_path(@user), class: "button is-black" %>
         </div>
       </div>
     </div>
@@ -54,9 +39,7 @@
             <div class="card">
               <div class="card-image">
                 <figure class="image is-4by3">
-            
                   <%= attachment_image_tag post, :image %>
-            
                 </figure>
               </div>
               <div class="card-content">
@@ -66,7 +49,7 @@
                     <span class="panel-icon">
                     <i class="far fa-eye" aria-hidden="true"></i>
                     </span>
-                    Look Post
+                    回答を見る
                     <% end %>
                     <% if @user.id == current_user.id %>
                       <%= link_to edit_post_path(post), class: "panel-block" do %>

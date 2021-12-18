@@ -18,12 +18,30 @@
  
  body {
   font-family: serif;
-  overflow:hidden
+  overflow: hidden;
+  height: 100%;
+}
+
+.top-content {
+  width: 100%;
+  position: relative;
+  position: fixed;
+  top: 73vh;
+  text-align: center;
+  align-items: center;
+}
+
+.top-menu {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  height: 170px;
 }
 
 .error-message {
   background-color: yellow;
   color: black;
+  
 }
 
  .notification:not(:last-child){
@@ -41,6 +59,7 @@
   background-size: contain;
   background-position: center;
 }
+
 .title {
   color: yellow;
 }
@@ -99,7 +118,6 @@
 }
 
 .user-all {
-  background-image: url(king.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
