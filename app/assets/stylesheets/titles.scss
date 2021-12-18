@@ -5,9 +5,40 @@
 .title-back {
   background-color: rgb(252, 206, 1);
   height: 96vh;
+  font-weight: bold;
+  color: black;
 }
 
 .title-back {
   background-color: rgb(252, 206, 1);
   height: 96vh;
+}
+
+.theme-title {
+  font-size: 40px;
+  padding-top: 60px;
+}
+
+.titles {
+  text-align: center;
+}
+
+.flex-buttons-title {
+  padding-left: 250px;
+}
+
+.panel-block {
+ margin-right: 90px;
+}
+
+.content-box {
+  padding: 50px 0 0 130px;
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.content-time {
+  text-align: right;
+  padding-right: 60px;
 }

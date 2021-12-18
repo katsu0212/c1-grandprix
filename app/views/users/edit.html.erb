@@ -1,53 +1,39 @@
-<div class="entry-back">
-  <section class="hero is-success">
-    <div class="container">
-      <h1 class="title">
-        Edit
-      </h1>
-    </div>
-  </section>
-
-<% if @user.errors.any? %>
-  <div class="notification is-danger">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
-    <ul>
-      <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-6">
-        <%= form_for @user do |f| %>
-
-        <div class="field">
-          <%= f.label :user_name, "Entry Name", class: "label" %>
-          <%= f.text_field :user_name, class: "input" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :email, "Email", class: "label" %>
-          <%= f.text_field :email, class: "input" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :profile, "Profile", class: "label" %>
-          <%= f.text_field :profile, class: "textarea" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :profile_image, "Profile Image", class: "label" %>
-          <%= f.attachment_field :profile_image, class: "input" %>
-        </div>
-        
-          <%= f.submit "Update", class: "button is-danger" %>
-
+<div class="edit-back">
+  <% if @user.errors.any? %>
+    <div class="notification is-danger">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
         <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <%= form_for @user do |f| %>
+          <div class="field">
+            <%= f.label :user_name, "名前", class: "label" %>
+            <%= f.text_field :user_name, class: "input" %>
+          </div>
+          <div class="field">
+            <%= f.label :email, "Email", class: "label" %>
+            <%= f.text_field :email, class: "input" %>
+          </div>
+          <div class="field">
+            <%= f.label :profile, "プロフィール", class: "label" %>
+            <%= f.text_field :profile, class: "textarea" %>
+          </div>
+          <div class="field">
+            <%= f.label :profile_image, "プロフィール画像", class: "label" %>
+            <%= f.attachment_field :profile_image, class: "input" %>
+          </div>
+            <%= f.submit "Update", class: "button is-danger" %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

@@ -5,17 +5,41 @@
 
 .my-back {
   background-color: rgb(255, 231, 20);
-  height: 100%;
+  text-align: center;
+  min-width: 100vh;
 }
 
-.post-right {
-  text-align: right;
-  padding-right: 30px;
+.post-title {
+  font-weight: bold;
+  font-size: 40px;
 }
 .column {
+  width: 50vh;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: bold;
   color: black;
-  text-align: center;
-  align-items: center;
 }
 
+.column {
+  text-align: center;
+}
 
+.updated {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.post-showback {
+  background-color: rgb(255, 231, 20);
+  text-align: center;
+  min-width: 100vh;
+  height: 95vh;
+}
+
+.name-holder {
+ font-size: 48px;
+ font-weight: bold;
+}

@@ -2,12 +2,11 @@
   <article class="media">
     <div class="media-content">
       <% unless user_signed_in? %>
-        <div class="columns is-centered">
+        <div class="top-content">
           <div class="top-menu">
-            <br>
-            <%= link_to "Log In", new_user_session_path, class: "login-button" %>
-            <br>
-            <%= link_to "New Entry", new_user_registration_path, class: "newenrty-button" %>
+            <br>ここは、日常に少しでもクスッと笑顔が生まれるようにと作られた大喜利のアプリです。
+            <br>大喜利と言うと某番組を思い出しますが、ここには一般人が集まっていますので肩の力を抜いて見てください。
+            <br>尚、ボタンで評価できますのでどうか優しい目で気軽にボタンを押してください。
           </div>
         </div>
       <% end %>
