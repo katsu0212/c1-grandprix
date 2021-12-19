@@ -9,11 +9,6 @@
   color: black;
 }
 
-.title-back {
-  background-color: rgb(252, 206, 1);
-  height: 96vh;
-}
-
 .theme-title {
   font-size: 40px;
   padding-top: 60px;
@@ -41,4 +36,12 @@
 .content-time {
   text-align: right;
   padding-right: 60px;
+}
+
+.select-box {
+  font-size: 18px;
+}
+
+.theme-box {
+  border-bottom: medium solid black;
 }

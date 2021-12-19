@@ -12,11 +12,12 @@
       <div class="is-size-4">
         <%= post.body %>
       </div>
-      <div class="media">
-        <div class="media-content has-text-right is-size-5 has-text-weight-bold">
-          <%= link_to post.user.user_name, user_path(post.user.id) %>
-        </div>
-      </div>
+      <%= link_to user_path(post.user.id), class: "panel-block" do %>
+          <div class="panel">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            名前  <%= post.user.user_name %>
+          </div>
+      <% end %> 
       <div class="flex-buttons">
         <div id="likes_buttons_<%= post.id %>">
           <%= render partial: 'likes/like', locals: {post: post} %>

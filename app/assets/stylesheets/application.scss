@@ -44,7 +44,7 @@
   
 }
 
- .notification:not(:last-child){
+.notification:not(:last-child){
 	margin-bottom: 0;
 }
 
@@ -103,24 +103,15 @@
   color: white;
 }
 
-
-
 .columns {
   align-items: center;
 }
-
 
 .detail {
   text-align: center;
   font-size: 32px;
   color: black;
   font-weight: bold;
-}
-
-.user-all {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .flex-buttons {

@@ -1,12 +1,4 @@
-<div class="entry-back">
-  <section class="hero is-black">
-    <div class="container">
-      <h1 class="title">
-        New Post Create
-      </h1>
-    </div>
-  </section>
-
+<div class="title-back">
   <% if @post.errors.any? %>
     <div class="notification is-danger">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
