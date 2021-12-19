@@ -9,7 +9,9 @@
       <div class="media">
         <div class="media-content is-size-5 has-text-weight-bold">
           <div class="content-box">
-           <%= title.content %>
+            <%= link_to title_path(title.id), class: "answer" do %>
+              <%= title.content %>
+            <% end %>
           </div>
         </div>
         <%= link_to user_path(title.user), class: "panel-block" do %>

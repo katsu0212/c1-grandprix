@@ -25,6 +25,5 @@ RSpec.describe PostsController, type: :request do
       get post_path(@post)
       expect(response.body).to include(@post.image_id)
     end
-    
   end
 end

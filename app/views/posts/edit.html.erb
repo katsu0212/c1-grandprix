@@ -1,13 +1,4 @@
-<section class="hero is-black">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Post Edit 
-      </h1>
-    </div>
-  </div>
-</section>
-
+<section class="post-show-back">
 <% if @post.errors.any? %>
   <div class="notification is-danger">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
@@ -28,13 +19,11 @@
             <%= f.label :body, "一言", class: "label" %>
             <%= f.text_area :body, class: "textarea" %>
           </div>
-
           <div class="field">
             <%= f.label :image, "写真", class: "label" %>
             <%= f.attachment_field :image, class: "input" %>
           </div>
-
-            <%= f.submit "更新", class: "button is-success" %>
+          <%= f.submit "更新", class: "button is-black" %>
         <% end %>
       </div>
     </div>

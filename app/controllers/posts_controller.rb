@@ -8,7 +8,6 @@ class PostsController < ApplicationController
     else
       render 'home/index'
     end
-    
   end
 
   def new
@@ -47,8 +46,10 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
-    post.destroy
-    redirect_to posts_path
+    if post.user_id == current_user.id
+      post.destroy
+      redirect_to posts_path
+    end
   end
   private
   def post_params

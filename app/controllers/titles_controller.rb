@@ -18,10 +18,15 @@ class TitlesController < ApplicationController
     end
   end
 
+  def show
+    @title = Title.find(params[:id])
+  end
   def destroy
     title = Title.find(params[:id])
-    title.destroy
-    render :index
+    if title.user.id == current_user.id
+      title.destroy
+      render :index
+    end
   end
   
   private

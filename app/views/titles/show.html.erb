@@ -1,0 +1,25 @@
+<div class="title-back">
+  <div class ="titles">
+      <div class="theme-title">
+       自分の投稿
+        <%= @title.theme.name %>
+      </div>
+    </div>
+    <div class="theme-box">
+      <div class="media">
+        <div class="media-content is-size-5 has-text-weight-bold">
+          <div class="content-box">
+            <%= link_to title_path(@title.id), class: "answer" do %>
+              <%= @title.content %>
+            <% end %>
+          </div>
+        </div>
+        <div class="panel">
+          <i class="fas fa-user" aria-hidden="true"></i>
+          名前  <%= @title.user.user_name %>
+        </div>
+      </div>
+  <% if @title.user.id == current_user.id %>
+    <%= link_to "消去", title_path(@title.id), method: :delete, class: "button is-danger" %>
+  <% end %>
+</div>
