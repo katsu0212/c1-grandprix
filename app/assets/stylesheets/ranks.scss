@@ -2,3 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.rank-back {
+  background-color: rgb(255, 231, 20);
+  height: 100vh;
+}
+
+.rank-content {
+  display: flex;
+}
+
+
+.likes-table thead th {
+	background:#181B39;
+	font-weight: bold;
+	color:yellow;
+  font-size: 32px;
+  width: 50vw;
+  padding-top: 40px;
+}
+
+.likes-table tbody th {
+	font-weight: bold;
+  font-size: 26px;
+  border-right: medium solid black;
+  border-bottom: medium solid black;
+}
+
+.smiles-table thead th {
+	background:#181B39;
+	font-weight: bold;
+	color:yellow;
+  font-size: 32px;
+  width: 50vw;
+  padding-top: 40px;
+}
+
+.smiles-table tbody th {
+	font-weight: bold;
+  font-size: 26px;
+  border-right: medium solid black;
+  border-bottom: medium solid black;
+}
+
+.roulette-btns {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.select-box {
+  text-align: center;
+  padding: 40px 0 ;
+}
