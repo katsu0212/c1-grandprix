@@ -1,86 +1,107 @@
- <div class="entry-back">
-  <section class="hero is-danger">
-    <div class="container">
-      <h1 class="title">
-        Ranking
-      </h1>
-    </div>
-  </section>
-  
-  <h2 class="rank-title">Like Ranking</h2>
-  
-  <% last_like = 0 %>
-  <% j = 1 %>
-  <% @month_post_like_ranks .each.with_index(1) do |rank, i| %>
-    <% if i == 1 %>
-      <% last_like = rank.likes.count %>
-    <% end %>
- 
-    <% if rank.likes.count != last_like %>
-      <% j = i %>
-      <ul class ="ranking">
-        <li>  第<%= j %>位  <%= rank.user.user_name %></li>
-        <li><%= rank.likes.count %>いいね</li>
-        <li><% last_like = rank.likes.count %> </li>
-      </ul>
-        
-    <% else %>
-      <ul class ="ranking">
-        <li> 第<%= j %>位 <%= rank.user.user_name %> </li>
+<div class="rank-back">
+  <div class="rank-content">
+    <table class="likes-table">
+      <% last_like = 0 %>
+      <% j = 1 %>
+      <% @month_post_like_ranks .each.with_index(1) do |rank, i| %>
+        <% if i == 1 %>
           <% last_like = rank.likes.count %>
-         <li><%= rank.likes.count %>いいね</li>
-      </ul>
-    <% end %>
-
-  <% end %>
-
-  <h2 class="rank-title">Title like Ranking</h2>
-
-  <% last_smile = 0 %>
-  <% j = 1 %>
-  <% @month_title_smile_ranks .each.with_index(1) do |rank, i| %>
-    <% if i == 1 %>
-      <% last_smile = rank.smiles.count %>
-    <% end %>
- 
-    <% if rank.smiles.count != last_smile %>
-      <% j = i %>
-      <ul class ="ranking">
-        <li>  第<%= j %>位  <%= rank.user.user_name %></li>
-        <li><%= rank.smiles.count %>いいね</li>
-        <li><% last_smile = rank.smiles.count %> </li>
-      </ul>
-        
-    <% else %>
-      <ul class ="ranking">
-        <li> 第<%= j %>位 <%= rank.user.user_name %> </li>
+        <% end %>
+        <% if rank.likes.count != last_like %>
+          <% j = i %>
+          <tbody>
+          <tr>
+            <th>第<%= j %>位  <%= rank.user.user_name %>
+            <%= rank.likes.count %>いいね
+            <% last_like = rank.likes.count %>
+          </th>
+          </tr>
+          <tfoot>
+          <tr>
+        <% else %>
+          <tbody>
+          <tr>
+            <th>第<%= j %>位  <%= rank.user.user_name %>
+            <%= rank.likes.count %>いいね
+            <% last_like = rank.likes.count %>
+          </th>
+          <tfoot>
+          <tr>
+        <% end %>
+      <% end %>
+      <thead>
+      <tr>
+      <th>写真で一言 月間ランキング</th>
+      </tr>
+      </thead>
+    </table>
+    <table class="smiles-table">
+      <% last_smile = 0 %>
+      <% j = 1 %>
+      <% @month_title_smile_ranks .each.with_index(1) do |rank, i| %>
+        <% if i == 1 %>
           <% last_smile = rank.smiles.count %>
-         <li><%= rank.smiles.count %>いいね</li>
-      </ul>
-    <% end %>
+        <% end %>
+        <% if rank.smiles.count != last_smile %>
+          <% j = i %>
+          <tbody>
+          <tr>
+            <th>第<%= j %>位  <%= rank.user.user_name %>
+            <%= rank.smiles.count %>いいね
+            <% last_smile = rank.smiles.count %>
+          </th>
+          </tr>
+          <tfoot>
+          <tr>
+        <% else %>
+          <tbody>
+          <tr>
+            <th>第<%= j %>位  <%= rank.user.user_name %>
+            <%= rank.smiles.count %>いいね
+            <% last_smile = rank.smiles.count %>
+          </th>
+          <tfoot>
+          <tr>
+        <% end %>
+      <% end %>
+      <thead>
+      <tr>
+      <th>お題で一言 月間ランキング</th>
+      </tr>
+      </thead>
+    </table>
+  </div>
 
-  <% end %>
-
-  
-  
-
-
-
-  <div id="large_block">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
+  <div class="select-box">
+    <div class="roule">月間1位だった人がご褒美を選択してルーレットを回してください
     </div>
-    <div id="btn">
-      <button id="start">スタート</button>
-      <button id="stop">ストップ</button>
-      <button id="reset">リセット</button>
+    <select>
+    <option>ご褒美</option>
+    <option>休憩しましょう!自販機1回奢り</option>
+    <option>無礼講だ!一日だけタメ口を使える</option>
+    <option>呑み行きましょう!呑みの店決め</option>
+    <option>朝までハシゴ!呑み1軒奢り</option>
+    <option>休憩しましょう!ジュース奢り</option>
+    </select>
+  </div>
+  <div id="large_block">
+    <div><input type="text" name="name"></p></div>
+    <div><input type="text" name="name"></p></div>
+    <div><input type="text" name="name"></p></div>
+    <div><input type="text" name="name"></p></div>
+    <div><input type="text" name="name"></p></div>
+    <div><input type="text" name="name"></p></div>
+    <div><input type="text" name="name"></p></div>
+    <div><input type="text" name="name"></p></div>
+    </div>
+    <div class="roulette-btns">
+      <div id="btn">
+        <button id="start">スタート</button>
+        <button id="stop">ストップ</button>
+        <button id="reset">リセット</button>
+      </div>
     </div>
   </div>
   <%= javascript_pack_tag 'index' %>
+
 </div>

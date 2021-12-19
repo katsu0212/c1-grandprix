@@ -2,8 +2,7 @@ class SmilesController < ApplicationController
   before_action :title_params
   
   def create
-   Smile.create(user_id: current_user.id, title_id: params[:id])
-  
+    Smile.create(user_id: current_user.id, title_id: params[:id])
   end
   
   def destroy
