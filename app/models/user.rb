@@ -8,14 +8,11 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :titles, dependent: :destroy
   has_many :smiles, dependent: :destroy
-
-
   with_options presence: true do
     validates :user_name
     validates :email
   end
   
-
   def liked_by?(post_id)
      likes.where(post_id: post_id).exists? 
   end
