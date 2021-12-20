@@ -23,10 +23,8 @@ class TitlesController < ApplicationController
   end
   def destroy
     title = Title.find(params[:id])
-    if title.user.id == current_user.id
-      title.destroy
-      render :index
-    end
+    title.destroy
+    redirect_to titles_path
   end
   
   private

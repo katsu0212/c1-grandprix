@@ -9,8 +9,10 @@
       <div class="media">
         <div class="media-content is-size-5 has-text-weight-bold">
           <div class="content-box">
-            <%= link_to title_path(title.id), class: "answer" do %>
-              <%= title.content %>
+            <% if title.user.id %>
+              <%= link_to title_path(title.id), class: "answer" do %>
+                <%= title.content %>
+              <% end %>
             <% end %>
           </div>
         </div>

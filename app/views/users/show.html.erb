@@ -12,21 +12,19 @@
             名前    <%= @user.user_name %>
           </div>     
         </div>
-            <% if current_user.id == @user.id %>
-              <td>
-                <%= @user.email %>
-              </td>
-            <% end %>
-          </tr>
-        </table>
         <table class="profile-comment">
           <td>
             <%= @user.profile %>
           </td>
         </table>
-        <br>
-        <%= link_to "編集", edit_user_path(@user), class: "button is-black" %>
-        </div>
+        <% if current_user.id == @user.id %>
+          <td>
+            <%= @user.email %>
+          </td>
+         </table> 
+          <br>
+            <%= link_to "編集", edit_user_path(@user), class: "button is-black" %>
+        <% end %>
       </div>
     </div>
   </section>
