@@ -3,15 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .title-back {
-  background-color: rgb(255, 231, 20);
+  background-color: black;
   height: 96vh;
   font-weight: bold;
   color: black;
 }
 
 .theme-title {
-  font-size: 40px;
+  font-size: 30px;
   padding-top: 60px;
+  color: white;
 }
 
 .titles {
@@ -26,28 +27,32 @@
  margin-right: 90px;
 }
 
+.show-panel {
+  background-color: rgb(255, 231, 20);
+}
+
 .content-box {
-  padding: 50px 0 0 130px;
   font-size: 25px;
-  width: 100%;
   text-align: center;
+  background-color: rgb(255, 231, 20);
+  color: black;
 }
 
 .content-time {
   text-align: right;
   padding-right: 60px;
+  color: white;
 }
 
-.select-box {
+.select-box2 {
   font-size: 18px;
-}
-
-.theme-box {
-  border-bottom: medium solid black;
+  text-align: center;
 }
 
 .answer {
   color: black;
+  background-color: rgb(255, 231, 20);
+  padding: 10px 10px;
 }
 
 .delete-box {
@@ -57,4 +62,8 @@
 
 .show-panel {
   padding-right: 30px;
+}
+
+.flex-buttons-title {
+  color: white;
 }

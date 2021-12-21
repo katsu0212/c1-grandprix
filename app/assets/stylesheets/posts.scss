@@ -4,14 +4,21 @@
 
 
 .my-back {
-  background-color: rgb(255, 231, 20);
+  background-color: black;
   text-align: center;
   min-width: 100vh;
 }
 
+.panel {
+  background-color: rgb(255, 231, 20);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .post-title {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 20px;
+  color: white;
 }
 .column {
   width: 50vh;
@@ -30,10 +37,11 @@
 .updated {
   font-size: 18px;
   font-weight: normal;
+  color: white;
 }
 
 .post-show-back {
-  background-color: rgb(255, 231, 20);
+  background-color: black;
   text-align: center;
   min-width: 100vh;
   height: 95vh;
@@ -42,4 +50,20 @@
 .name-holder {
  font-size: 48px;
  font-weight: bold;
+}
+
+.is-size-2 {
+  background-color: rgb(255, 231, 20);
+}
+
+.flex-buttons {
+  color: white;
+}
+
+.field label {
+  color: white;
+}
+
+.detail {
+  color: white;
 }

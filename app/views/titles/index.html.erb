@@ -5,32 +5,26 @@
         <%= title.theme.name %>
       </div>
     </div>
-    <div class="theme-box">
-      <div class="media">
-        <div class="media-content is-size-5 has-text-weight-bold">
-          <div class="content-box">
-            <% if title.user.id %>
-              <%= link_to title_path(title.id), class: "answer" do %>
-                <%= title.content %>
-              <% end %>
-            <% end %>
-          </div>
+    <div class="content-box">
+      <% if title.user.id %>
+        <div class="answer">
+          <%= title.content %>
         </div>
-        <%= link_to user_path(title.user), class: "panel-block" do %>
-          <div class="panel">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            名前  <%= title.user.user_name %>
-          </div>
-        <% end %> 
+      <% end %>
+    </div>
+    <div class="flex-buttons-title">
+      <div id="smiles_buttons_<%= title.id %>">
+        <%= render partial: 'smiles/smile', locals: {title: title} %>
       </div>
-      <div class="flex-buttons-title">
-        <div id="smiles_buttons_<%= title.id %>">
-          <%= render partial: 'smiles/smile', locals: {title: title} %>
-        </div>
+    </div>
+    <%= link_to user_path(title.user), class: "panel-block" do %>
+      <div class="panel">
+        <i class="fas fa-user" aria-hidden="true"></i>
+        名前  <%= title.user.user_name %>
       </div>
-      <div class="content-time">
-        <time><%= title.updated_at.strftime("%Y-%m-%d %H:%M") %></time>
-      </div>
+    <% end %> 
+    <div class="content-time">
+      <time><%= title.updated_at.strftime("%Y-%m-%d %H:%M") %></time>
     </div>
   <% end %>
 </div>
