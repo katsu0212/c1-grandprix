@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .rank-back {
-  background-color: rgb(255, 231, 20);
+  background-color: rgb(12, 12, 11);
   height: 100vh;
 }
 
@@ -11,37 +11,33 @@
   display: flex;
 }
 
-
 .likes-table thead th {
-	background:#181B39;
 	font-weight: bold;
-	color:yellow;
-  font-size: 32px;
+	color: white;
+  font-size: 20px;
   width: 50vw;
-  padding-top: 40px;
+  padding: 20px 30px;
 }
 
 .likes-table tbody th {
 	font-weight: bold;
   font-size: 26px;
-  border-right: medium solid black;
-  border-bottom: medium solid black;
+  padding-left: 30px;
+  color: red;
 }
 
 .smiles-table thead th {
-	background:#181B39;
+  color: white;
 	font-weight: bold;
-	color:yellow;
-  font-size: 32px;
-  width: 50vw;
-  padding-top: 40px;
+  font-size: 20px;
+  padding: 20px 30px;
 }
 
 .smiles-table tbody th {
 	font-weight: bold;
   font-size: 26px;
-  border-right: medium solid black;
-  border-bottom: medium solid black;
+  padding-left: 30px;
+  color: red;
 }
 
 .roulette-btns {
@@ -51,5 +47,11 @@
 
 .select-box {
   text-align: center;
-  padding: 40px 0 ;
+  padding: 100px 0 ;
+  color: white;
+  width: 100vw;
+}
+
+.text-size {
+  width: 800px;
 }
