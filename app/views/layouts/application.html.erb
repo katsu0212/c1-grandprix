@@ -42,17 +42,15 @@
           <div class="navbar-item">
             <%= link_to "お題を投稿する", new_title_path, class: "navbar-item button is-black" %>
           </div>
-          <div class="navbar-item">
-            <%= link_to "参加者一覧", users_path, class: "navbar-item button is-black"  %>
-          </div>
-          <div class="navbar-item">
-            <%= link_to "ランキング", ranks_path, class: "button is-black" %>
-          </div>
-
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">       
                 <p class="control">
+                  <p class="control">
+                  <%= link_to "参加者一覧", users_path, class: "navbar-item button is-black"  %>
+                </p>
+               <p class="control">
+                  <%= link_to "ランキング", ranks_path, class: "button is-black" %>
                   <%= link_to "マイページ", user_path(current_user), class: "button is-black" %>
                 </p>
                 <p class="control">

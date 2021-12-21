@@ -12,7 +12,7 @@
           <tbody>
           <tr>
             <th>第<%= j %>位  <%= rank.user.user_name %>
-            <%= rank.likes.count %>いいね
+            <%= rank.likes.count %>スマイル
             <% last_like = rank.likes.count %>
           </th>
           </tr>
@@ -22,7 +22,7 @@
           <tbody>
           <tr>
             <th>第<%= j %>位  <%= rank.user.user_name %>
-            <%= rank.likes.count %>いいね
+            <%= rank.likes.count %>スマイル
             <% last_like = rank.likes.count %>
           </th>
           <tfoot>
@@ -47,7 +47,7 @@
           <tbody>
           <tr>
             <th>第<%= j %>位  <%= rank.user.user_name %>
-            <%= rank.smiles.count %>いいね
+            <%= rank.smiles.count %>スマイル
             <% last_smile = rank.smiles.count %>
           </th>
           </tr>
@@ -57,7 +57,7 @@
           <tbody>
           <tr>
             <th>第<%= j %>位  <%= rank.user.user_name %>
-            <%= rank.smiles.count %>いいね
+            <%= rank.smiles.count %>スマイル
             <% last_smile = rank.smiles.count %>
           </th>
           <tfoot>
@@ -73,18 +73,19 @@
   </div>
 
   <div class="select-box">
-    <div class="roule">月間1位だった人がご褒美を選択してルーレットを回してください
+    <div class="roule">月間1位の方がご褒美を選択してルーレットを回してください
     </div>
     <select>
     <option>ご褒美</option>
-    <option>休憩しましょう!自販機1回奢り</option>
+    <option>休憩しよう!自販機1回奢り</option>
     <option>無礼講だ!一日だけタメ口を使える</option>
-    <option>呑み行きましょう!呑みの店決め</option>
+    <option>呑みに行こう!呑みの幹事</option>
     <option>朝までハシゴ!呑み1軒奢り</option>
-    <option>休憩しましょう!ジュース奢り</option>
     </select>
   </div>
-  <div class=rank-info>名前を入力してください</div>
+  <div class=rank-info>1位以外の人の名前を入力してください
+  <br>
+  当たった人は1位の方のご褒美を実行してください</div>
   <div id="large_block">
     <div><input type="text" size="40" name="name"></p></div>
     <div><input type="text" size="40" name="name"></p></div>
