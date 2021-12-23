@@ -62,4 +62,4 @@ gem 'faker'
 gem 'pry-rails'
 gem 'active_hash'
 gem "aws-sdk-s3", require: false
-gem 'mini_magick'
+gem 'mini_magick', '~> 4.8'

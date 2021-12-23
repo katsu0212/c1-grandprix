@@ -1,26 +1,20 @@
  <div class="my-back">
-  <section class="section">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-5">
-          <div class="panel">
-              <i class="fas fa-user" aria-hidden="true"></i>
-            名前    <%= @user.user_name %>
-          </div>     
-        </div>
-        <table class="profile-comment">
-          <td>
-            <%= @user.profile %>
-          </td>
-        </table>
-        <% if current_user.id == @user.id %>
-          <br>
-            <%= link_to "編集", edit_user_path(@user), class: "button is-white" %>
-        <% end %>
-      </div>
+  <div class="show-profile">
+    <div class="column">
+      <div class="panel">
+          <i class="fas fa-user" aria-hidden="true"></i>
+        名前    <%= @user.user_name %>
+      </div>     
     </div>
-  </section>
-
+    <table class="profile-comment">
+      <td>
+        <%= @user.profile %>
+      </td>
+    </table>
+    <% if current_user.id == @user.id %>
+      <br>
+        <%= link_to "編集", edit_user_path(@user), class: "button is-white" %>
+    <% end %>
   <section class="section">
     <div class="container">
       <div class="columns is-multiline">
