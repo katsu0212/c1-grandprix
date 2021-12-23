@@ -2,16 +2,20 @@
   <section class="section">
     <div class="container">
       <div class="columns is-multiline">
-        <% @users.each do |user| %>
-          <%= link_to user_path(user), class: "panel-block" do %>
-            <div class="panel">
-              <i class="fas fa-user" aria-hidden="true"></i>
-              名前  <%= user.user_name %>
+        <div class="counts-set">
+          <% @users.each do |user| %>
+            <%= link_to user_path(user), class: "panel-block" do %>
+              <div class="panel">
+                <i class="fas fa-user" aria-hidden="true"></i>
+                名前  <%= user.user_name %>
+              </div>
+            <% end %> 
+            <div class="post-count">
+              写真投稿数:<%= user.posts.count %>
+              お題投稿数:<%= user.titles.count %>
             </div>
-            
-          <% end %> 
-          投稿数:<%= user.posts.count %>
-        <% end %>
+         <% end %>
+        </div>
       </div>
     </div>
   </section>
