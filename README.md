@@ -16,7 +16,6 @@
 - has_many :likes, dependent: :destroy
 - has_many :titles, dependent: :destroy
 - has_many :smiles, dependent: :destroy
-- attachment :profile_image
 
 ## posts テーブル
 
@@ -31,7 +30,6 @@
 
 - belongs_to :user
 - has_many   :likes, dependent: :destroy
-- attachment :profile_image
 
 ## titles テーブル
 
