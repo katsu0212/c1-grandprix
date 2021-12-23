@@ -26,14 +26,17 @@
 
 .user-all {
   background-color: black;
-  height: 100%;
-  background-size: cover;
+  height: 100vh;
 }
 
 .profile-content {
   padding-right: 40px;
 }
 
-.post-count {
-  background-color: black;
+.panel-block {
+  width: fit-content;
+}
+
+.show-profile {
+  text-align: center;
 }

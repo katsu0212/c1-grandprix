@@ -32,10 +32,15 @@
 }
 
 .content-box {
-  font-size: 25px;
+  font-size: 28px;
   text-align: center;
+  margin: 0 auto;
+  align-items: center;
   background-color: rgb(255, 231, 20);
   color: black;
+  width:fit-content;
+  padding: 0 30px;
+  
 }
 
 .content-time {

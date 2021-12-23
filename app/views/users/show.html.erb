@@ -1,4 +1,4 @@
- <div class="my-back">
+ <div class="user-all">
   <div class="show-profile">
     <div class="column">
       <div class="panel">
@@ -13,8 +13,9 @@
     </table>
     <% if current_user.id == @user.id %>
       <br>
-        <%= link_to "編集", edit_user_path(@user), class: "button is-white" %>
+      <%= link_to "編集", edit_user_path(@user), class: "button is-white" %>
     <% end %>
+  </div>
   <section class="section">
     <div class="container">
       <div class="columns is-multiline">
