@@ -3,14 +3,6 @@
     <div class="container">
       <div class="columns is-multiline">
         <% @users.each do |user| %>
-          <div class="column is-3">
-            <div class="card-image">
-              <figure class="image">
-                <%= link_to user_path(user) do %>
-                  <%= image_tag user.image, fallback: "noimage.png" %>
-                <% end %>
-              </figure>
-            </div>
             <%= link_to user_path(user), class: "panel-block" do %>
               <div class="panel">
                 <i class="fas fa-user" aria-hidden="true"></i>
