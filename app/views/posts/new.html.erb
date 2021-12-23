@@ -17,7 +17,7 @@
           <%= form_for @post do |f| %>
             <div class="field">
               <%= f.label :image, "写真", class: "label" %>
-              <%= f.attachment_field :image, class: "input" %>
+              <%= f.file_field :image, class: "input" %>
             </div>
             <div class="field">
               <%= f.label :body, "ひとこと", class: "label" %>
