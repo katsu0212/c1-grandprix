@@ -126,7 +126,7 @@ test111
 
 - ・フロントエンド: HTML,CSS / JavaScript, JQuery
 - バックエンド : Ruby on Rails (ver 6.0.4) 
-- インフラ : AWS (S3) , MySQL 
+- インフラ : AWS (EC2/S3) , MySQL 
 - テスト : RSpec 
 - テキストエディタ : Visual Studio 
 - Code・タスク管理 : GitHubプロジェクトボード     
