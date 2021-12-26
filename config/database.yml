@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: c1_grandprix_production
-  username: c1_grandprix
-  password: <%= ENV['C1_GRANDPRIX_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
